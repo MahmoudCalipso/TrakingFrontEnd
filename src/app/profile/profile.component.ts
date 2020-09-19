@@ -7,9 +7,14 @@ import { TokenService } from '../Services/token.service';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
+  TokenValue: any;
+  UserID: any;
+
   constructor(private token: TokenService) { }
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
+    this.TokenValue = this.token.getToken();
+    this.UserID = this.token.getUserId();
   }
 }

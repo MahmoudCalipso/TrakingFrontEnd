@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
     "@angular/animations": "~10.0.11",
     "@angular/common": "~10.0.11",
     "@angular/compiler": "~10.0.11",
@@ -20,9 +21,12 @@
     "@angular/platform-browser-dynamic": "~10.0.11",
     "@angular/router": "~10.0.11",
     "@angular/typescript": "^2.0.0-5d0e199",
+    "@ng-web-apis/common": "^1.6.0",
+    "@ng-web-apis/geolocation": "^1.0.3",
     "@ngtools/webpack": "^10.0.6",
     "bootstrap": "^4.5.2",
     "d3": "^5.16.0",
+    "mapbox-gl": "^1.12.0",
     "rxjs": "~6.6.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.1"
@@ -33,6 +37,7 @@
     "@angular/compiler-cli": "~10.0.11",
     "@angular/language-service": "^10.0.11",
     "@types/d3": "^5.7.2",
+    "@types/googlemaps": "^3.39.13",
     "@types/jasmine": "^3.5.12",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^14.6.0",
