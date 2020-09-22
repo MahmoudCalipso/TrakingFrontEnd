@@ -18,7 +18,7 @@ export class LocationService {
     return this.http.get<LocationModule[]>(API_PATH + 'Locations');
   }
 
-  saveTracking(track): Observable<LocationModule>{
+  SaveTracking(track): Observable<LocationModule>{
     return this.http.post<LocationModule>(API_PATH + 'Locations', track);
   }
 
