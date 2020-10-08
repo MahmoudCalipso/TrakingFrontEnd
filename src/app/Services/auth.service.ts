@@ -20,26 +20,24 @@ export class AuthService {
 
   constructor(private http: HttpClient , private tokenService: TokenService , private router: Router) { }
 
-  signIn(user: any ){
-    return this.http.post<any>( AUTH_API + 'signin', user )
-      .subscribe((res: any) => {
-        this.tokenService.saveToken(res.accessToken);
-        this.tokenService.saveUser(res.Email);
-        this.tokenService.saveUserId(res.UserId);
-        this.router.navigate(['profile']);
-        /*const ID = this.tokenService.getUserByID();
-        this.tokenService.getUserByID().subscribe(() => {
+  signIn(user: any ): Promise<any>{
+    return new Promise((resolve, reject) => {
+      this.http.post<any>(AUTH_API + 'signin', user)
+        .subscribe((res: any) => {
+          this.tokenService.saveToken(res.accessToken);
+          this.tokenService.saveUser(res.Email);
+          this.tokenService.saveUserId(res.UserId);
           this.router.navigate(['profile']);
         });
-        */
-
-      });
+    });
   }
-  register(user: UserModule){
-    return this.http.post(AUTH_API + 'signup', user).pipe(
-      catchError(this.handleError)
+  register(user: UserModule): Promise<any>{
+    return new Promise((resolve, reject) => {
+      this.http.post(AUTH_API + 'signup', user).pipe(
+        catchError(this.handleError)
       ).subscribe(() => {
         this.router.navigate(['/signin']);
+      });
     });
   }
   isLoggedIn(): boolean{

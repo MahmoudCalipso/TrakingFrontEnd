@@ -10,6 +10,6 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class FamilyCarModule {
-  FamilyCarID: number;
-  NameFamily: string;
+  familyCarId: number;
+  nameFamily: string;
 }

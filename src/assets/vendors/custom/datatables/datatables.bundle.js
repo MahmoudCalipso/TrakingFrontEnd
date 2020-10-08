@@ -15492,7 +15492,7 @@ var defaults = {
 	}
 };
 
-if (KTUtil.isRTL()) {
+/*if (KTUtil.isRTL()) {
 	defaults = {
 		"language": {
 			"paginate": {
@@ -15503,7 +15503,7 @@ if (KTUtil.isRTL()) {
 			}
 		}
 	}
-}
+}*/
 
 $.extend(true, $.fn.dataTable.defaults, defaults);
 /*!

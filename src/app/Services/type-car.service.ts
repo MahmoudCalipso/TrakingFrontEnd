@@ -24,8 +24,8 @@ export class TypeCarService {
   getTypeCarById(id): Observable<TypeCarModule>{
     return this.http.get<TypeCarModule>(API_PATH + '/' + id, { responseType: 'json' } );
   }
-  editeTypeCar(id): Observable<TypeCarModule>{
-    return this.http.put<TypeCarModule>(API_PATH + '/' + id, { responseType: 'json' } );
+  editeTypeCar(id , typecar): Observable<TypeCarModule>{
+    return this.http.put<TypeCarModule>(API_PATH + '/' + id, typecar);
   }
   deleteTypeCar(id): Observable<TypeCarModule>{
     return this.http.delete<TypeCarModule>(API_PATH + '/' + id, { responseType: 'json' } );
