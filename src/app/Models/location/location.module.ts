@@ -10,10 +10,9 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class LocationModule {
-  LocationID: number;
-  Latitude: number;
-  Longitude: number;
-  Speed: number;
-  startDate: Date;
-  endDate: Date;
+  LocationId: number;
+  UserId: number;
+  CarId: number;
+  StartDate: Date;
+  EndDate: Date;
  }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import {TokenService} from './Services/token.service';
+import { Plugins } from '@capacitor/core';
 
 
 @Component({
