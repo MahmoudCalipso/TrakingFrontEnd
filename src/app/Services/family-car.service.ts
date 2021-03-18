@@ -27,7 +27,7 @@ export class FamilyCarService {
   getFamilyCarById(id): Observable<FamilyCarModule>{
     return this.http.get<FamilyCarModule>(API_PATH + '/' + id, {responseType: 'json'});
   }
-  editeFamilyCar(id, familycar): Observable<FamilyCarModule>{
+  editeFamilyCar(id, familycar: FamilyCarModule): Observable<FamilyCarModule>{
     return this.http.put<FamilyCarModule>(API_PATH + '/' + id, familycar, {responseType: 'json'} );
   }
   deleteFamilyCar(id): Observable<FamilyCarModule>{
